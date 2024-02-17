@@ -5,10 +5,14 @@
 
 void OutputNaturalNumbers(int first, int second)
 {
-   if (first > second) return;    
+   if (first == second) 
+   {
+   Console.Write(first);  
+   return;
+   }    
    else 
    {
-    Console.Write(first + " "); 
+    Console.Write(first + ", "); 
     first += 1;
     OutputNaturalNumbers(first, second);
    } 
@@ -18,4 +22,10 @@ Console.WriteLine("Введите значение M: ");
 int mValue = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение N: ");
 int nValue = int.Parse(Console.ReadLine()!);
+if (mValue > nValue)
+{
+    int temp = mValue;
+    mValue = nValue;
+    nValue = temp;
+}
 OutputNaturalNumbers(mValue, nValue);
