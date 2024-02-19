@@ -3,21 +3,22 @@
 // в промежутке от M до N. Использовать рекурсию, не
 // использовать циклы.
 
-void OutputNaturalNumbers(int first, int second)
+void OutputNaturalNumbers(int first, int second, string result)
 {
    if (first == second) 
    {
-   Console.Write(first);  
+   Console.Write($"\"{result += first}\""); 
    return;
    }    
    else 
    {
-    Console.Write(first + ", "); 
+    result += first +", "; 
     first += 1;
-    OutputNaturalNumbers(first, second);
+    OutputNaturalNumbers(first, second, result);
    } 
 }
 
+string result = "";
 Console.WriteLine("Введите значение M: ");
 int mValue = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение N: ");
@@ -28,4 +29,4 @@ if (mValue > nValue)
     mValue = nValue;
     nValue = temp;
 }
-OutputNaturalNumbers(mValue, nValue);
+OutputNaturalNumbers(mValue, nValue, result);
