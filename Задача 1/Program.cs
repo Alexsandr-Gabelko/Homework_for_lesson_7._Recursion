@@ -18,7 +18,7 @@ void OutputNaturalNumbers(int first, int second, string result)
    } 
 }
 
-string result = "";
+string result = String.Empty;
 Console.WriteLine("Введите значение M: ");
 int mValue = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение N: ");
