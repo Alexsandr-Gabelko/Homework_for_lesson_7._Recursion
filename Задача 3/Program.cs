@@ -21,5 +21,6 @@ for (int i = 0; i < array.Length; i++)
     {
     array[i] = rnd.Next(0, 101);
     }
-// Console.WriteLine(string.Join(", ", array)); 
+Console.Write(string.Join(" ", array)); 
+Console.Write("  =>  ");
 PrintFromEnd(array, array.Length - 1);
