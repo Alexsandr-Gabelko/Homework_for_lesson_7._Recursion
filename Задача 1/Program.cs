@@ -5,17 +5,17 @@
 
 void OutputNaturalNumbers(int first, int second, string result)
 {
-   if (first == second) 
-   {
-   Console.Write($"\"{result += first}\""); 
-   return;
-   }    
-   else 
-   {
-    result += first +", "; 
-    first += 1;
-    OutputNaturalNumbers(first, second, result);
-   } 
+    if (first == second)
+    {
+        Console.Write($"\"{result += first}\"");
+        return;
+    }
+    else
+    {
+        result += first + ", ";
+        first += 1;
+        OutputNaturalNumbers(first, second, result);
+    }
 }
 
 string result = String.Empty;
